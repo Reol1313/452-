@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My name is Reol Shangwenmin</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #3f51b5;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --button-color: #ff4081;
+    --button-hover-color: #ff197f;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  .profile-info {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-info h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+
+  .profile-info h3 {
+    color: #555;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Add spacing between images */
+  }
+
+  .image-container img {
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .image-container img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+
+  .replace-button {
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .replace-button:hover {
+    background-color: var(--button-hover-color);
+  }
+
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .image-container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="profile-info">
+    <h1>My name is Reol Shangwenmin</h1>
+    <h3>My photo</h3>
+</div>
+
+<div class="image-container">
+    <!-- 定义两个图片元素 -->
+    <img id="imageOne" src="https://jamesbibbruns.github.io/452-5/R-C.jpg" alt="James' attractive image using box model" style="display: none;">
+    <img id="imageTwo" src="https://jamesbibbruns.github.io/452/2.jpg" alt="Another image of James">
+    <!-- 按钮用于触发图片互换 -->
+    <button class="replace-button" onclick="swapImages()">Swap Photos</button>
+</div>
+
+<script>
+function swapImages() {
+  var imageOne = document.getElementById('imageOne');
+  var imageTwo = document.getElementById('imageTwo');
+
+  if (imageOne.style.display === "none") {
+    imageOne.style.display = "block";
+    imageTwo.style.display = "none";
+  } else {
+    imageOne.style.display = "none";
+    imageTwo.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
